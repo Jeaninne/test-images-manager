@@ -1,0 +1,52 @@
+.Button {
+  height: 2rem;
+  min-width: 7rem;
+  padding: 5px;
+  font-size: 0.875rem;
+  border-radius: 3px;
+  position: relative;
+  vertical-align: middle;
+  border: 1px solid;
+
+  & + & {
+    margin-left: 1rem;
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &--primary {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-white);
+
+    &[disabled] {
+      background-color: var(--color-acсent);
+      border-color: var(--color-acсent);
+      color: var(--color-white);
+    }
+  }
+
+  &--secondary {
+    background-color: var(--color-white);
+    border-color: var(--color-brand);
+    color: var(--color-brand);
+
+    &[disabled] {
+      background-color: var(--color-white);
+      border-color: var(--color-acсent);
+      color: var(--color-acсent);
+    }
+  }
+
+  &:hover:not([disabled]) {
+    box-shadow: 0 0 2px 1px var(--color-acсent);
+  }
+
+  .Loader {
+    color: var(--color-white);
+  }
+}

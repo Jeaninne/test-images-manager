@@ -1,0 +1,74 @@
+.Overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.Loader {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  color: var(--color-brand);
+
+  &--s {
+    font-size: 1rem;
+    left: calc(50% - 0.5rem);
+  }
+
+  &--m {
+    font-size: 3rem;
+    top: calc(50% - 1.5rem);
+    left: calc(50% - 1.5rem);
+  }
+
+  &__circle {
+    height: 100%;
+    width: 100%;
+    font-size: inherit;
+    animation: circular-bar-rotate 2s linear infinite;
+  }
+
+  &__path {
+    animation: circular-bar-dash 1.5s ease-in-out infinite;
+    stroke-dasharray: 2.08%, 416%;
+    stroke-dashoffset: 0;
+    -webkit-transition: stroke-dasharray 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: stroke-dasharray 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    fill: none;
+    stroke-linecap: round;
+    stroke-miterlimit: 20;
+    stroke-width: 0.25rem;
+    stroke: currentColor;
+  }
+}
+
+@keyframes circular-bar-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes circular-bar-dash {
+  0% {
+    stroke-dasharray: 2.08%, 416%;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 185.4%, 416%;
+    stroke-dashoffset: -72.9%;
+  }
+
+  to {
+    stroke-dasharray: 185.4%, 416%;
+    stroke-dashoffset: -258.33%;
+  }
+}

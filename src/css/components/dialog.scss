@@ -1,0 +1,61 @@
+.Dialog {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border-radius: 5px;
+
+  &__wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__container {
+    max-height: calc(100% - 3rem);
+    width: calc(100% - 3rem);
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+
+    &--small {
+      width: auto;
+      max-width: calc(100% - 3rem);
+    }
+  }
+
+  &__header{
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__close {
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--color-text);
+  }
+
+  &__content {
+    padding: 0 1rem;
+  }
+
+  &__actions {
+    padding: 1rem;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

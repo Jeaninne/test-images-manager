@@ -1,0 +1,28 @@
+.Tooltip {
+  visibility: hidden;
+  width: 100px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+
+  &--top {
+    top: -15px;
+  }
+
+  &--bottom {
+    bottom: -15px;
+  }
+
+  &--left {
+    left: -50px;
+  }
+
+  &--right {
+    right: -50px;
+  }
+}

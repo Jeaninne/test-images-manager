@@ -1,0 +1,14 @@
+.DetailedImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &:hover .Tooltip {
+    visibility: visible;
+  }
+
+  &__view {
+    max-width: 100%;
+  }
+}

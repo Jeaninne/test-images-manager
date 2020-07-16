@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "src": "https://www.columbusdirect.com/media/31677/woman-dancing-in-colourful-powder-at-holi-in-india.jpg",
+      "text": "Holi",
+      "position": "top",
+      "color": "#9874FE",
+      "id": "dso40ysb6"
+    },
+    {
+      "src": "https://news.artnet.com/app/news-upload/2017/09/Burning-Man-2017.jpg",
+      "text": "Burning man",
+      "position": "bottom",
+      "color": "#26B6F9",
+      "id": "per02hpw7"
+    },
+    {
+      "src": "https://ichef.bbci.co.uk/news/660/cpsprodpb/4E7B/production/_108519002_georgeharrison-18-web.jpgmainphoto.jpg",
+      "text": "Shambala",
+      "position": "bottom",
+      "color": "#F2133C",
+      "id": "dfe23fsd4"
+    }
+  ]
+}

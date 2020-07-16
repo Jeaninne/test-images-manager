@@ -1,0 +1,32 @@
+.Form {
+  display: flex;
+  flex-flow: row nowrap;
+
+  &--leftColumn,
+  &--rightColumn {
+    width: 50%;
+  }
+
+  &--rightColumn {
+    padding: 0 1rem;
+  }
+
+  &__item + &__item {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Form {
+    flex-flow: column wrap;
+
+    &--leftColumn,
+    &--rightColumn {
+      width: 100%;
+    }
+
+    &--rightColumn {
+      padding: 2rem 0 0;
+    }
+  }
+}

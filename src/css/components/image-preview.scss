@@ -1,0 +1,50 @@
+.PreviewImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  border: 1px solid var(--color-brand-secondary);
+  position: relative;
+  cursor: pointer;
+  max-height: 300px;
+  width: 100%;
+
+  &__view {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0.5rem;
+  }
+
+  &__edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    padding: 5px;
+    background-color: var(--color-brand-secondary);
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+  &:hover .PreviewImage__edit {
+    visibility: visible;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: calc(100%/2 - 1rem);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc(100%/3 - 1rem);
+  }
+
+  @media screen and (min-width: 992px) {
+    width: calc(100%/4 - 1rem);
+  }
+
+  @media screen and (max-width: 768px) {
+    .PreviewImage__edit {
+      visibility: visible;
+    }
+  }
+}
